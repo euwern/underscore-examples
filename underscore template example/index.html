@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>_template Example</title>
+</head>
+<body>
+Check out source code to see how it works :)
+<table>
+	<thead>
+		<tr>
+			<th>Product Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+		</tr>
+	</thead>
+	<tbody id="tbodyProductTable">
+	</tbody>
+</table>
+
+<script id="productTemplate" type="text/template">
+	<% _.each(list,function(item){%>
+	<tr>
+		<td><%= item.productName%></td>
+		<td><%= item.price%></td>
+		<td><%= item.quantity%></td>
+	</tr>
+	<%});%>
+</script>
+
+<div style="display:none;">
+	<span id="hidJSONData">[{"productName":"Instant Noodle","price":"$10.00","quantity":"1"},{"productName":"Oat Meal","price":"$13.99","quantity":"3"},{"productName":"Apple","price":"$23.00","quantity":"10"}]</span>
+</div>
+
+<!--Loading scripts-->
+<script src="js/underscore.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
